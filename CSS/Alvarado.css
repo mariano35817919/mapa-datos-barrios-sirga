@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+.contenedor-imagen {
+    position: relative;
+    width: 690px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+#Mapa {
+    width: 46%;
+    height: auto;
+    transform: rotate(270deg) translate(22%, 40%);
+}
+
+.enlace {
+    position: absolute;
+    color: yellow;
+    background-color: black; /* Fondo semi-transparente para el texto */
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 21px;
+    font-style:inherit;
+    text-decoration: none;
+    pointer-events: auto; /* Asegura que el enlace sea clickeable */
+}
