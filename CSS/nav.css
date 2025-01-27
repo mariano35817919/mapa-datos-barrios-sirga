@@ -1,8 +1,33 @@
-header{
+
+ul{
+    list-style-type: none;
+    background-color: black;
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 70px;
     
+}
+ul img {
+    height: 100px; /* Ajusta la altura de la imagen según sea necesario */
+    width: 100px;
+    /* margin: 60px; Espacio entre la imagen y los elementos de la lista */
+    /*padding-right: 90px;*/
+    border-radius: 50%;
+}
+
+ul li {
+    display: inline;
+    margin-right: 150px;
+
+}
+
+a{
+    color: yellow;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
 }
 
