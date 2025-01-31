@@ -1,33 +1,41 @@
 
-ul{
-    list-style-type: none;
+body{
     background-color: black;
-    margin: 0;
-    padding: 0;
+}
+
+.container1{
     display: flex;
     align-items: center;
+    background-color: white;
     
 }
-ul img {
-    height: 100px; /* Ajusta la altura de la imagen según sea necesario */
-    width: 100px;
-    /* margin: 60px; Espacio entre la imagen y los elementos de la lista */
-    /*padding-right: 90px;*/
-    border-radius: 50%;
+.container1 img {
+    margin-left: 2rem;
+    margin-right: 19rem;
+    width: 10%;
+}
+  
+
+h1{
+    color: rgb(7, 90, 7);
 }
 
-ul li {
-    display: inline;
-    margin-right: 150px;
 
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: yellow;
 }
 
-a{
-    color: yellow;
-    text-decoration: none;
+.container img {
+    
+    width: 40%;
 }
 
-li a:hover {
-    background-color: #111;
+.container div {
+    display: grid;
+    grid-template-rows: auto auto; /* Primera fila para el enlace, segunda para la imagen */
+    justify-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto del enlace */
+    align-items: center;
 }
-
