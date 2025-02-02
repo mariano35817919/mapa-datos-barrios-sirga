@@ -1,12 +1,14 @@
 
+
+
 body{
-    background-color: black;
+    background-color: #3E498C;
 }
 
 .container1{
     display: flex;
     align-items: center;
-    background-color: white;
+    
     
 }
 .container1 img {
@@ -17,25 +19,36 @@ body{
   
 
 h1{
-    color: rgb(7, 90, 7);
+    color:#F2BE22;
 }
 
 
-.container{
+
+.container {
     display: grid;
     grid-template-columns: auto auto;
-    background-color: yellow;
+    background-color: #F2BE22;
 }
 
 .container img {
+    height: 80%;
+    width: 60%;
     
-    width: 40%;
 }
 
+
+
 .container div {
-    display: grid;
-    grid-template-rows: auto auto; /* Primera fila para el enlace, segunda para la imagen */
-    justify-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Centra el texto del enlace */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    
+}
+
+a{
+    color: #3E498C;
+    text-decoration: none;
+    
+    margin-bottom: 18px;
 }
