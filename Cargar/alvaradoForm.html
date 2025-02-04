@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Carga de Datos</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario para Cargar Datos</h1>
+    <form id="formulario-datos">
+        <label>Manzana: <input type="text" name="manzana" required></label><br>
+        <label>UF: <input type="text" name="uf" required></label><br>
+        <label>Edificio: <input type="text" name="edificio" required></label><br>
+        <label>Piso: <input type="number" name="piso" required></label><br>
+        <label>Depto: <input type="text" name="depto" required></label><br>
+        <label>Situación Titularidad: <input type="text" name="situacion" required></label><br>
+        <label>Apellido: <input type="text" name="apellido" required></label><br>
+        <label>Nombre: <input type="text" name="nombre" required></label><br>
+        <label>Fecha de Nacimiento: <input type="date" name="fecha_nacimiento" required></label><br>
+        <label>DNI: <input type="number" name="dni" required></label><br>
+        <label>CUIT: <input type="text" name="cuit" required></label><br>
+        <label>Teléfono: <input type="tel" name="telefono" required></label><br><br>
+
+        <button type="submit">Agregar a la Tabla</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Manzana</th>
+                <th>UF</th>
+                <th>Edificio</th>
+                <th>Piso</th>
+                <th>Depto</th>
+                <th>Situación Titularidad</th>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Fecha de Nacimiento</th>
+                <th>DNI</th>
+                <th>CUIT</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-datos">
+            <tr>
+                <td>1</td>
+                <td>A</td>
+                <td>Edificio 1</td>
+                <td>3</td>
+                <td>301</td>
+                <td>Propietario</td>
+                <td>Pérez</td>
+                <td>Juan</td>
+                <td>1990-05-15</td>
+                <td>12345678</td>
+                <td>20-12345678-9</td>
+                <td>1123456789</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('formulario-datos').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            const formData = new FormData(event.target);
+            const newRow = document.createElement('tr');
+
+            for (let value of formData.values()) {
+                const cell = document.createElement('td');
+                cell.textContent = value;
+                newRow.appendChild(cell);
+            }
+
+            document.getElementById('tabla-datos').appendChild(newRow);
+            event.target.reset(); // Limpia el formulario
+        });
+    </script>
+</body>
+</html>
