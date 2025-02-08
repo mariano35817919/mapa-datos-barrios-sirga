@@ -16,11 +16,14 @@
     </style>
 </head>
 <body>
+    <div id="navbar"></div>
+
+
     <h1>Formulario para Cargar Datos</h1>
     <form id="formulario-datos">
         <label>Manzana: <input type="text" name="manzana" required></label><br>
         <label>UF: <input type="text" name="uf" required></label><br>
-        <label>Edificio: <input type="text" name="edificio" required></label><br>
+        <label>Edificio: <input type="number" name="edificio" required></label><br>
         <label>Piso: <input type="number" name="piso" required></label><br>
         <label>Depto: <input type="text" name="depto" required></label><br>
         <label>Situación Titularidad: <input type="text" name="situacion" required></label><br>
@@ -28,7 +31,7 @@
         <label>Nombre: <input type="text" name="nombre" required></label><br>
         <label>Fecha de Nacimiento: <input type="date" name="fecha_nacimiento" required></label><br>
         <label>DNI: <input type="number" name="dni" required></label><br>
-        <label>CUIT: <input type="text" name="cuit" required></label><br>
+        <label>CUIT: <input type="number" name="cuit" required></label><br>
         <label>Teléfono: <input type="tel" name="telefono" required></label><br><br>
 
         <button type="submit">Agregar a la Tabla</button>
@@ -69,6 +72,9 @@
         </tbody>
     </table>
 
+
+
+    <script src="../JS/navBar.js"></script>
     <script>
         document.getElementById('formulario-datos').addEventListener('submit', function(event) {
             event.preventDefault(); // Evita que la página se recargue
@@ -86,5 +92,21 @@
             event.target.reset(); // Limpia el formulario
         });
     </script>
+<!--document.getElementById('formulario-datos')   Busca el formulario con el id="formulario-datos"-->
+<!--addEventListener('submit', function(event) { Escucha el evento "submit" (cuando se envía el formulario) y ejecuta la función.-->
+<!--event.preventDefault(); Evita que la página se recargue al enviar el formulario. -->
+<!-- const formData = new FormData(event.target)  Captura los datos del formulario en un objeto FormData-->
+<!--const newRow = document.createElement('tr')  Crea una nueva fila (<tr>) en la tabla. -->
+<!--for (let value of formData.values()) { Itera sobre cada valor ingresado en el formulario.-->
+<!--const cell = document.createElement('td') Crea una celda (<td>) para la fila.-->  
+<!--cell.textContent = value Inserta el valor del campo en la celda.-->  
+<!--newRow.appendChild(cell); Agrega la celda a la fila.-->  
+<!-- } cierra el bucle for -->
+<!--document.getElementById('tabla-datos').appendChild(newRow);  Agrega la fila completa (<tr>) al cuerpo de la tabla (<tbody>).-->
+<!--event.target.reset();  Limpia el formulario después de agregar los datos.-->
+<!-- }); Cierra la función que maneja el evento submit. -->
+
+
+     
 </body>
 </html>
